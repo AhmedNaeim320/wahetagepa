@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>واحة عجيبة للمأكولات البدوية والمندي</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* تخصيص الأزرار */
+        button {
+            background-color: #f0a500; /* لون الخلفية */
+            color: white; /* لون النص */
+            border: none; /* إزالة الحدود */
+            padding: 10px 20px; /* المسافة حول النص */
+            font-size: 16px; /* حجم النص */
+            cursor: pointer; /* تغيير المؤشر عند المرور على الزر */
+            border-radius: 5px; /* جعل الزر بزوايا دائرية */
+            transition: background-color 0.3s ease; /* تأثير التغيير في اللون */
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #ff8c00; /* تغيير اللون عند المرور بالماوس */
+        }
+
+        .center-button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* تخصيص الجدول */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f0a500;
+            color: white;
+        }
+
+        /* تخصيص رابط الفيسبوك */
+        .facebook-link {
+            background-color: #4267B2; /* اللون الأزرق الخاص بالفيسبوك */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .facebook-link:hover {
+            background-color: #365899; /* لون أزرق غامق عند المرور بالماوس */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>واحة عجيبة للمأكولات البدوية والمندي</h1>
+        <p>أشهى المأكولات البدوية والمندي بانتظارك!</p>
+        <p>للطلبات والاستفسار: <strong>أحمد نعيم - 0106287188</strong></p>
+        
+        <!-- زر لزيارة صفحة الفيسبوك -->
+        <a href="https://www.facebook.com/yourpage" target="_blank" class="facebook-link">زيارة صفحة الفيسبوك</a>
+    </header>
+
+    <section id="menu">
+        <h2>قائمة الطعام</h2>
+
+        <!-- جدول لعرض قائمة الطعام -->
+        <table>
+            <thead>
+                <tr>
+                    <th>الصنف</th>
+                    <th>السعر</th>
+                    <th>الكمية</th>
+                    <th>الإضافة</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>مبكبكة ضاني</td>
+                    <td>50 جنيه</td>
+                    <td><input type="number" id="quantity1" value="1"></td>
+                    <td><button class="center-button" id="addToInvoiceButton1">إضافة إلى الفاتورة</button></td>
+                </tr>
+                <tr>
+                    <td>فراخ على الفحم</td>
+                    <td>40 جنيه</td>
+                    <td><input type="number" id="quantity2" value="1"></td>
+                    <td><button class="center-button" id="addToInvoiceButton2">إضافة إلى الفاتورة</button></td>
+                </tr>
+                <tr>
+                    <td>كيلو ضاني مندي</td>
+                    <td>120 جنيه</td>
+                    <td><input type="number" id="quantity3" value="1"></td>
+                    <td><button class="center-button" id="addToInvoiceButton3">إضافة إلى الفاتورة</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- زر لطلب الآن -->
+        <button class="center-button" id="orderNowButton">اطلب الآن</button>
+    </section>
+
+    <section id="invoice">
+        <h2>فاتورتك</h2>
+        <table id="invoiceTable">
+            <thead>
+                <tr>
+                    <th>الصنف</th>
+                    <th>الكمية</th>
+                    <th>السعر</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- الأصناف ستضاف هنا باستخدام JavaScript -->
+            </tbody>
+        </table>
+        
+        <!-- زر مسح الفاتورة -->
+        <button id="clearInvoiceButton">مسح الفاتورة</button>
+        
+        <div>
+            <strong>المجموع الكلي:</strong> <span id="totalPrice">0</span> جنيه
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
